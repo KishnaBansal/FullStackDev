@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>prompt() Demo:  </h1>
+        <button onclick="myinput()">Click to enter your name</button>
+        <p id="msg"></p>
+        <script>
+            function myinput() {
+                var name = prompt("Enter your name");
+                if(name == null || name=="") {
+                    document.getElementById("msg").innerHTML="Your name is required"
+                }
+                else {
+                    document.getElementById("msg").innerHTML="You entered: " + name;
+                }
+            };
+        </script>
+    </body>
+</html>

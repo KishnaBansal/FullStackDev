@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <center>
+            <h2><u>Registration Page</u></h2>
+            <form>
+                <label for="name">Name: </label>
+                <input type="text" name="name" required>
+                <br> <br>
+                <label for="email">Email:  </label>
+                <input type="email" name="email" required>
+                <br> <br>
+                <label for="age">Age: </label>
+                <input type="int" name="age" required>
+                <br> <br>
+                <label for="country">Country: </label>
+                <select name="country" id="country">
+                    <option>Select an option</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Australia">Australia</option>
+                </select>
+                <br> <br>
+                <label for="state">State: </label>
+                <select name="state" id="state">
+                    <option>Select an option</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Jammu">Jammu</option>
+                    <option value="Goa">Goa</option>
+                </select> 
+                <br> <br>
+                <label for="password">Password: </label>
+                <input type="password" name="password" required>
+                <br> <br>
+                <label for="Gender">Gender: </label>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <br> <br>
+                <label for="address">Address: </label>
+                <br>
+                <textarea name="address" id="address" rows="4" cols="30"></textarea>
+                <br> <br>
+                <input id="submitButton" type = "submit" value="Submit" width= "100">
+                <input id="submitButton" type = "reset" value="Reset" width="100%" style="color: red;">
+                <br> <br>
+                <a href="login_page.html">Existing User</a>    
+            </form>
+        </center>
+    </body>
+</html>
