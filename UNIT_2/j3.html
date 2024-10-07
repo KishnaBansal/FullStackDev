@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+     <h1>Guess the number</h1>
+     <p id = "msg"></p>
+     <script>
+        function guesss(){
+            var rand = Math.floor(Math.random()*11);
+            var guess = prompt("Enter a number between 0 to 10")
+            if(parseInt(guess)>10){
+                alert("Please enter a number between 0 to 10")
+                guesss();
+            }
+            if(parseInt(guess) == rand){
+                document.getElementById("msg").innerHTML = "Congratulations! You have guessed the correct number"
+            }
+            else{
+                document.getElementById("msg").innerHTML = "Sorry! You have guessed the wrong number"
+            }
+        }
+     </script>
+     <button onclick="guesss()">Start</button>
+</body>
+</html>
