@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess Random Integer</title>
+</head>
+<body>
+    <h1>Random Integer Function</h1>
+    <button onclick="guess()">Guess the number</button>
+    <script>
+        function guess() {
+            let n = prompt("Enter the number to guess");
+            let randomInt = Math.floor((Math.random() * 10) + 1);
+            if(n == randomInt) {
+                alert("You have guessed it right!!");
+            }
+            else {
+                alert("Sorry the right number was: " + randomInt);
+            }
+        }
+    </script>
+</body>
+</html>

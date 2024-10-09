@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Incrementer-Decrementer</title>
+</head>
+<body>
+    <h1>Change the number</h1>
+    <button onclick="inc()">Increment</button>
+    <button onclick="dec()">Decrement</button>
+    <button onclick="reset()">Reset</button>
+    <br>
+    <p id="n">0</p>
+    <script>
+        let count = 0;
+        function inc() {
+            count++;
+            document.getElementById("n").innerHTML = count;
+        }
+        function dec() {
+            count--;
+            document.getElementById("n").innerHTML = count;
+        }
+        function reset() {
+            count = 0;
+            document.getElementById("n").innerHTML = count;
+        }
+    </script>
+</body>
+</html>
