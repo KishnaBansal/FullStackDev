@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>Keyboard events</h2>
+    <input type="text" id="inputBox" placeholder="Type Something...">
+    <diV id="output">Press any key</diV>
+    <script>
+        const inputBox = document.getElementById("inputBox");
+        const output = document.getElementById("output");
+
+        inputBox.onkeydown = function(event) {
+            output.innerHTML = "Key Down: " + event.key;
+        };
+        inputBox.onkeyup = function(event) {
+            output.innerHTML = "Key Up: " + event.key;
+        }
+        // inputBox.onkeypress = function(event) {
+        //     output.innerHTML = "Key Press: " + event.key;
+        // }
+    </script>
+</body>
+</html>
