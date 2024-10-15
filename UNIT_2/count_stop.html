@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Incrementer-Decrementer</title>
+</head>
+<body>
+    <h1>Change the number</h1>
+    <button onclick="inc()" id="incBtn">Increment</button>
+    <button onclick="stop()" id="decBtn">Stop</button>
+    
+    <br>
+    <p id="n">0</p>
+    <script>
+    let isStopped = false;
+    let isValid = null;
+    let count = 0;
+        function inc() {
+            if(!isStopped && isValid == null) {
+                    isValid = setInterval(function() {
+                        count++;
+                        document.getElementById("n").innerHTML = count;
+                    });                
+            }
+        }
+        function stop() {
+            if(isValid) {
+                document.getElementById("n").innerHTML = count;
+                clearInterval(isValid);
+                isValid = null;
+            }
+           isStopped = true;
+            
+        }
+        
+        
+    </script>
+</body>
+</html>
