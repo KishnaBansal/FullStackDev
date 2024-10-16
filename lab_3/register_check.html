@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br> <br>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email">
+        <br> <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <br> <br>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone">
+        <br> <br>
+        <label for="address">Address: </label>
+        <input type="textarea" id="address" name="address">
+        <br> <br>
+        <button type="submit" >Submit</button>
+    </form>
+    <script>
+        function validateForm() {
+            var errorMessage = validateName() || validatePswd() || validateEmail() || validatePhone() || validateAddress();
+            if(errorMessage) {
+                alert(errorMessage);
+                return false;
+            }
+            alert("Form submitted successfully");
+            return true;
+        }
+        function validateName() {
+            var name = document.getElementById("name").value;
+            var containsNumber = /\d/;
+            if (name.length < 4) {
+                return "Name must be at least 4 characters long.";
+            }
+            if(containsNumber.test(name)) {
+                return "Name should not contain numbers";
+            }
+            return null;
+        }
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if(!emailPattern.test(email)) {
+                return "Enter valid email";
+            }
+            return null;
+        }
+        function validatePswd() {
+            var pswd = document.getElementById("password").value;
+            if(pswd.length < 8) {
+                return "Length of password should be greater than 8";
+            }
+            if(pswd.search(/[A-Z]/) == -1) {
+                return "Password must contain atleast one uppercase letter";
+            }
+            if(pswd.search(/[!@#$%^&*]/) == -1) {
+                return "Password must contain atleast one special character";
+            }
+            return null;
+        }
+        function validatePhone() {
+            var phone = document.getElementById("phone").value;
+            if(phone.length < 10) {
+                return"Phone number must be of length equal to 10";
+            }
+            if(phone.search(/[A-Z],[a-z]/) == -1) {
+                return "Phone number must not contain alphabets";
+            }
+            return null;
+        }
+        function validateAddress() {
+            var address = document.getElementById("address").value;
+            if(address.length == 0) {
+                return"Address must not be empty";
+            }
+            return null;
+        }
+    </script>
+</body>
+</html>
