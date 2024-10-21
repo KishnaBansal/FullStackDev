@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Today's Date is: </title>
+</head>
+<body>
+    <h1>Date Display Function</h1>
+    <button onclick="displayDate()">Display Date</button>
+
+    <script>
+        function displayDate() {
+            const currentDate = new Date();
+            const date = currentDate.toDateString();
+            alert("Today's Date is: " + date);
+        }
+    </script>
+</body>
+</html>

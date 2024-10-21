@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial of positive integer</title>
+</head>
+<body>
+    <h1>Factorial function</h1>
+    <button onclick="fact()">Factorial</button>
+    <script>
+        function fact() {
+            let n = parseInt(prompt("Enter a positive integer:"));
+            let result = 1;
+            let i = n;
+            while (i > 0) {
+                result *= i;
+                i--;
+            }
+            alert("The factorial of " + n + " is: " + result);
+        }
+    </script>
+</body>
+</html>
