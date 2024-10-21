@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Window Events</title>
+    
+</head>
+<body>
+    <h2>Window events: load,scroll,resize</h2>
+    <div class="info" id="info">Page Status</div>
+    <script>
+        const infoDiv = document.getElementById("info");
+
+        //Event: Focus on input field
+        window.addEventListener('load',function() {
+            infoDiv.textContent = "Page has fully loaded";
+            infoDiv.style.backgroundColor = 'green';
+        });
+        
+        window.addEventListener('resize',function() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            infoDiv.textContent = "Page is resized: Width: " + width + "   Height: " + height;
+            infoDiv.style.backgroundColor = 'red';
+        });
+
+        window.addEventListener('scroll',function() {
+            const scrollPosition = window.scrollY;
+            infoDiv.textContent = "Page is scrolled to Y-position: " + scrollPosition;
+            infoDiv.style.backgroundColor = 'coral';
+        });
+    </script>
+</body>
+</html>
