@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="header">Hello World!</h1>
+    <p class="content">First para</p>
+    <p class="content">Second para</p>
+    <p>Classless para</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button id="btn">Change context</button>
+
+    <script>
+        const header = document.getElementById("header");
+        header.style.color = "red";
+
+        const paras = document.getElementsByClassName("content");
+        for(let i=0;i<paras.length;i++) {
+            paras[i].style.fontWeight = "bold";
+        }
+
+        const listItems = document.getElementsByTagName('li');
+        for(let i=0;i<listItems.length;i++) {
+            listItems[i].style.textTransform = "uppercase";
+        }
+
+        const firstPara = document.querySelector('p');
+        firstPara.style.backgroundColor = "green";
+
+        const allListItems = document.querySelectorAll("ul li");
+        allListItems.forEach(item => {
+            item.style.marginLeft = "200px";
+        })
+    </script>
+</body>
+</html>
