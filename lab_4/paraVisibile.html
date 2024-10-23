@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Paragraph Visibility</title>
+</head>
+<style>body{background-color: white;} </style>
+<body>
+    <center>
+        <h2>Paragraph visibility</h2>
+        <p id="para">This is the para which can be toggled for its visibility</p>
+        <button id="Vbtn" onclick="togglePara()">Hide</button>
+    </center>
+    <script>
+        const para = document.getElementById("para");
+        var btn = document.getElementById("Vbtn");
+        function togglePara() {
+            // if(background-color == white) {
+            //     background-color == black;
+            //     btn.textContent = "Show";
+            // }
+            // else {
+            //     background-color == black;
+            //     btn.textContent = "Hide";
+            // }
+            if(para.style.display == "none") {
+                para.style.display = "block";
+                btn.textContent = "Hide";
+            }
+            else {
+                para.style.display = "none";
+                btn.textContent = "Show";
+            }
+        }
+    </script>
+</body>
+</html>

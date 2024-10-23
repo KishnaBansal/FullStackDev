@@ -1,0 +1,8 @@
+write a javascript program to togle visibility of a paragraph on the web page when the user clicks a button . The text should be either shown or hidden
+also the button should display show text or hide text based on current state
+
+Write a javascript program to create a list of items on web page. include buttons to add new items, remove item and clear the entire list
+display the list dynamically on the web pages in when the items are added and removed using dom feature
+
+Create a simple quiz application using javascript. The quiz should contain atleast three questuons each with multiple choice answers
+validate the user answers and display scores at the end
