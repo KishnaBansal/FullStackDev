@@ -8,6 +8,6 @@ console.log(a + " " + b)
 {
     //const variables cannot be reassigned
     const a = 23;
-    console.log(a)
+    console.log(a)  
 }
 

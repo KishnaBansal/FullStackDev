@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Handle Text Box Inputs</title>
+</head>
+<body>
+    <h2 onclick="handleBody()">Click anywhere on the body</h2>
+    <input type="text" id="textBox" onchange="handleBox()" placeholder="Enter text here">
+    <br> <br>
+    <input type="password" id="pswd" oninput="handlePassword()" placeholder="Enter password here">
+    <p id="pswdMsg"></p>
+    <br> <br>
+    <button id="btn">Click Me</button>
+</body>
+<script>
+    function handleBox() {
+        let textEntered = document.getElementById("textBox").value;
+        alert("Text entered is: " + textEntered);
+    }
+    function handlePassword() {
+        let passwordEntered = document.getElementById("pswd").value;
+        document.getElementById("pswdMsg").innerText = "You entered: " + passwordEntered;
+    }
+    function handleBody() {
+        alert("Body was clicked");
+    }
+    document.getElementById("btn").addEventListener("click",handleBtn);
+    function handleBtn() {
+        alert("Button was clicked");
+    }
+</script>
+</html>

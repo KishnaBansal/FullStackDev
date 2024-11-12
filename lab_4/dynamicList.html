@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dynamic List</title>
+</head>
+<body>
+    <center>
+        <h2>Dynamic List</h2>
+        <input type="text" id="newItem" placeholder="Add item in the list"><br><br>
+        <button onclick="addItem()">Add Item</button><br><br>
+        <button onclick="removeItem()">Remove Item</button><br><br>
+        <button onclick="clearList()">Clear the entire list</button><br><br>
+        <ul id="items"></ul>
+    </center>
+    <script>
+        var list = document.getElementById("items");
+        function addItem() {
+            var newItem = document.getElementById("newItem").value;
+            if (newItem) {
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(newItem));
+                list.appendChild(li);
+                // document.getElementById("newItem").value = "";
+            } else {
+                alert("Please enter an item.");
+            }
+        }
+        function removeItem() {
+            if(list.lastChild) {
+                list.removeChild(list.lastChild);
+            }
+            else {
+                alert("No items to remove");
+            }
+        }
+        function clearList() {
+            while(list.firstChild) {
+                list.removeChild(list.firstChild);
+            }
+        }
+    </script>
+</body>
+</html>
