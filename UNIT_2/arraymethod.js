@@ -19,7 +19,8 @@ num.unshift(4)
 console.log(num);
 
 //splice()
-num.splice(1,1,5,6);
+console.log("splice");
+num.splice(1,0,5,6);
 console.log(num);
 
 //slice()
